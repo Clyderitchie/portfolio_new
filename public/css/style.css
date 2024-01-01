@@ -1,0 +1,20 @@
+#helloHome {
+    border-bottom: 4px solid white;
+    margin-bottom: 4%;
+}
+
+#clyde {
+    width: auto;
+}
+
+.container {
+    outline: 4px solid red
+}
+
+#intro {
+    outline: 4px solid blue
+}
+
+#explore {
+    outline: 4px solid green
+}
