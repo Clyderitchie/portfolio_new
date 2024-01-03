@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Admin } = require('../models');
+const { Admin, Users, FizzBuzz } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -14,13 +14,17 @@ router.get('/', async (req, res) => {
     }
 });
 
-// router.get('/games', async (req, res) => {
-//     try {
-//         const games = await 
-//     } catch (err) {
-//         console.log(err);
-//         res.status(500).json(err.message);
-//     }
-// });
+router.get('/fizzBuzz', async (req, res) => {
+    try {
+        const fizzbuzzData = await FizzBuzz.findAll({ include: { model: Users}});
+        const fizzBuzz = fizzbuzzData.map(p => p.get({ plain: true }));
+        res.render('fizzBuzz', {
+            fizzBuzz
+        })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err.message);
+    }
+});
 
 module.exports = router;
