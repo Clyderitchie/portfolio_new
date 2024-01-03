@@ -10,8 +10,17 @@ router.get('/', async (req, res) => {
        }) 
     } catch (err) {
         console.log(err);
-        res.status(500).json(err.message)
+        res.status(500).json(err.message);
     }
 });
+
+// router.get('/games', async (req, res) => {
+//     try {
+//         const games = await 
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err.message);
+//     }
+// });
 
 module.exports = router;
