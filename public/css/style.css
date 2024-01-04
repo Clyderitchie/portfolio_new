@@ -25,3 +25,6 @@ ul, a {
 }
 
 /* FizzBuzz Game */
+#rules {
+    outline: 4px solid green;
+}

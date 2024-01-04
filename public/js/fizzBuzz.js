@@ -130,3 +130,4 @@ function renderScores() {
 
     highscoreEl.appendChild(scoreListEl);
 }
+
