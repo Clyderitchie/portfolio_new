@@ -18,8 +18,12 @@ router.get('/fizzBuzz', async (req, res) => {
     try {
         const fizzbuzzData = await FizzBuzz.findAll({ include: { model: Users}});
         const fizzBuzz = fizzbuzzData.map(p => p.get({ plain: true }));
+        // const usernames = fizzBuzz.map(fb => fb.User && fb.User.username || '');
+        console.log("Looking for username's: ", fizzBuzz);
+        // console.log("usernames var returning: ", usernames);
         res.render('fizzBuzz', {
-            fizzBuzz
+            fizzBuzz,
+            // usernames
         })
     } catch (err) {
         console.log(err);

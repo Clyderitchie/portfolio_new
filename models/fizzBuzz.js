@@ -19,18 +19,18 @@ FizzBuzz.init(
             },
         },
         usernameId: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             references: {
                 model: 'users',
-                key: 'id'
+                key: 'username'
             },
         },
     },
     {
         sequelize,
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
-        underscored: true,
+        underscored: false,
         modelName: 'fizzBuzz',
     }
 );

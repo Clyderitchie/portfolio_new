@@ -1,14 +1,17 @@
 [
     {
         "score": 100,
-        "usernameId": 1
+        "usernameId": "Dylan",
+        "userId": 2
     },
     {
         "score": 75,
-        "usernameId": 2
+        "usernameId": "ed",
+        "userId": 3
     },
     {
         "score": 80,
-        "usernameId": 3
+        "usernameId": "Dale",
+        "userId": 1
     }
 ]

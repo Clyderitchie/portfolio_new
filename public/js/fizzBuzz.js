@@ -42,7 +42,7 @@ function randomNumbers() {
         console.log('nothing');
     }
 
-    document.querySelector('#numberInput').setHTML(randomNumber);
+    document.querySelector('#numberInput').innerHTML = randomNumber;
     return randomNumber;
 }
 
@@ -51,7 +51,7 @@ function startTimer() {
         timer--;
         if (timer <= 0) {
             clearInterval(countdown);
-            document.querySelector('#numberInput').setHTML('Game Over')
+            document.querySelector('#numberInput').innerHTML = 'Game Over'
             startBtn.disabled = true;
             saveScore();
         }

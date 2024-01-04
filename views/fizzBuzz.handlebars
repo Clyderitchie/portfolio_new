@@ -1,41 +1,28 @@
-<h2 class="text-light">
-    Hello and welcome to the fizzbuzz game
-</h2>
+<div class="container p-2">
+    {{#each fizzBuzz}}
+    <h2 class="text-light d-flex justify-content-center">
+        Hello {{user.username}} and welcome to my version of fizzbuzz!
+    </h2>
+    {{/each}}
+</div>
 
 <div class="container">
-    <!-- Introduction -->
-    <div class="row mt-3">
-        <div class="col d-flex justify-content-center">
-            Hello, welcome to the fizzBuzz game. In this game you will input a number into the search bar and then guess
-            if it will return fizz, buzz, or fizzBuzz.
+    <!-- Highscore list -->
+    <div class="row mt-3 justify-content-end">
+        <div id="highscore" class="col-6 text-light">
+            <h2 class="text-light">High scores:</h2>
+            <ol id="highscoreList" class="text-light"></ol>
         </div>
     </div>
-    <!-- Game rules -->
-    <div class="row mt-3">
-        <div class="col-6">
-            <ul>
-                <h2>Rules:</h2>
-                <li>If a number is divisible by 3 then it will return fizz. </li>
-                <li>If a number is divisible by 5 then it will return buzz.</li>
-                <li>If a number is divisible by 15 then it returns fizzBuzz.</li>
-                <li>You will have 60 seconds you try and guess what a number will return.</li>
-                <li>Your final score will be added to the high score list if it is in the top 5 high score.</li>
-            </ul>
-        </div>
-        <!-- Highscore list -->
-        <div id="highscore" class="col-6">
-            <ol id="highscoreList">
-                <h2 class="text-light">High scores:</h2>
-            </ol>
-        </div>
-    </div>
+</div>
+<div class="container">
     <!-- Start game -->
     <div class="row mt-3">
         <div class="col-6 d-flex justify-content-center">
             <button id="startBtn" type="button" class="btn btn-light">Start Game</button>
         </div>
-        <div id="timer" class="col-3 d-flex justify-content-center fw-bold fs-4"></div>
-        <div id="score" class="col-3 d-flex justify-content-start fw-bold fs-4"></div>
+        <div id="timer" class="col-3 d-flex justify-content-center fw-bold fs-4 text-light"></div>
+        <div id="score" class="col-3 d-flex justify-content-start fw-bold fs-4 text-light"></div>
     </div>
     <!-- User input -->
     <div class="row mt-3">
@@ -54,3 +41,40 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <!-- Game rules modal -->
+    <div class="row mt-3">
+        <div class="col-6">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Game
+                rules</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">FizzBuzz rules.</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <p class="text-light">
+                                The rules are very simple to the game, you have 60 seconds to determine what a number
+                                will return. to
+                                determine the
+                                correct response a number that is divisible by 15 returns fizzBuzz, if it is divisible
+                                by 5 it returns
+                                buzz, and a number
+                                divisible by 3 returns fizz! Each one you get right you get one point. Good luck!
+                            </p>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/fizzBuzz.js"></script>

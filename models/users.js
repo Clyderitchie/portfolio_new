@@ -19,9 +19,9 @@ Users.init(
     },
     {
         sequelize,
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
-        underscored: true,
+        underscored: false,
         modelName: 'users',
     }
 );
