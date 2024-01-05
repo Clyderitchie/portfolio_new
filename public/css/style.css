@@ -5,11 +5,7 @@
 
 #clyde {
     width: auto;
-}
-
-.container {
-    outline: 4px solid red
-}
+};
 
 #intro {
     outline: 4px solid blue
@@ -25,6 +21,6 @@ ul, a {
 }
 
 /* FizzBuzz Game */
-#rules {
-    outline: 4px solid green;
-}
+/* .container {
+    outline: 4px solid red;
+}; */
