@@ -6,6 +6,7 @@ let scores = JSON.parse(localStorage.getItem('scores')) || [];
 let searchEl = document.querySelector('#userSearch');
 let inputEl = document.querySelector('#userInput');
 let startBtn = document.querySelector('#startBtn');
+let newGameBtn = document.querySelector('#newGameBtn');
 let numberEl = document.querySelector('#numberInput');
 let highscoreEl = document.querySelector('#highscore');
 let scoreListEl = document.querySelector('#highscoreList');
@@ -28,6 +29,14 @@ startBtn.addEventListener('click', startTimer);
 startBtn.addEventListener('click', () => {
     randomNumbers();
 
+});
+newGameBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    timer = 60; // reset the timer to its initial value
+    score = 0; // reset the score to 0
+    scoreEl.textContent = `Score: ${score}`; // update the score display
+    startTimer(); // start the timer again
+    randomNumbers(); // generate a new random number
 });
 
 // Functions
